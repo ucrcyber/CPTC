@@ -8,7 +8,7 @@
 function getTools {
     wget -q -O - archive.kali.org/archive-key.asc | sudo apt-key add -
     declare -a packages
-    packages=("hydra" "hashcat" "john" "dirbuster" "cewl" "nikto")
+    packages=("hydra" "hashcat" "john" "dirbuster" "cewl" "nikto" "sqlmap" "burp" "msfconsole")
     for pkg in "${packages[@]}"
     do
         sudo apt-get install $pkg -y
